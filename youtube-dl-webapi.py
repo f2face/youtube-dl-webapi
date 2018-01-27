@@ -7,7 +7,7 @@ app = Flask(__name__)
 ydl_opts = {}
 
 @app.route('/', methods = ['GET'])
-def samplefunction():
+def retrieve_video_informations():
     required_params = ['url']
     missing_params = [key for key in required_params if key not in request.args.keys()]
 
