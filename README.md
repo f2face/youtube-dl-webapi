@@ -18,7 +18,9 @@ Based on YouTube-DL by rg3: https://github.com/rg3/youtube-dl
  2. Create virtual environment
 
     > cd youtube-dl-webapi
+
     > virtualenv venv
+
     > venv\scripts\activate
 
  3. Install required packages
