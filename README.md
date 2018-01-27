@@ -30,3 +30,5 @@ Based on YouTube-DL by rg3: https://github.com/rg3/youtube-dl
  4. Run (for testing purpose)
  
     > python youtube-dl-webapi.py
+
+ 5. Open browser: http://localhost:8000/?url=**YOUTUBE_VIDEO_URL**
