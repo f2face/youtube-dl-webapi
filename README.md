@@ -31,4 +31,8 @@ Based on YouTube-DL by rg3: https://github.com/rg3/youtube-dl
  
     > python youtube-dl-webapi.py
 
- 5. Open browser: http://localhost:8000/?url=**YOUTUBE_VIDEO_URL**
+ 5. Open browser: http://localhost:8000/?url=YOUTUBE_VIDEO_URL
+ 
+ ## What's Next
+ 
+  - Run it as daemon. Use Gunicorn, Supervisor, Nginx reverse proxy, or whatever you want.
