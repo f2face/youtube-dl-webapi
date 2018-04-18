@@ -1,15 +1,16 @@
 from flask import Flask, jsonify, request
-from subprocess import call
 import youtube_dl
 
 app = Flask(__name__)
-
 ydl_opts = {}
 
-@app.route('/', methods = ['GET'])
+
+@app.route('/', methods=['GET'])
 def retrieve_video_informations():
     required_params = ['url']
-    missing_params = [key for key in required_params if key not in request.args.keys()]
+    missing_params = [
+        key for key in required_params
+        if key not in request.args.keys()]
 
     if len(missing_params) == 0 and len(request.args['url']) > 0:
         try:
@@ -21,16 +22,16 @@ def retrieve_video_informations():
                 return jsonify(result)
         except Exception as e:
             resp = {
-                "status":"failure",
+                "status": "failure",
                 "error": "missing parameters",
                 "message": str(e)
             }
             return jsonify(resp)
     else:
         resp = {
-                "status":"failure",
-                "error" : "missing parameters",
-                "message" : "Provide %s in request" %(missing_params)
+                "status": "failure",
+                "error": "missing parameters",
+                "message": "Provide %s in request" % (missing_params)
             }
         return jsonify(resp)
 
